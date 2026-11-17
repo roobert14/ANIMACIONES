@@ -1,0 +1,123 @@
+*{
+    margin: 0 auto;
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+
+.cuadrado_azul {
+    width: 100px;
+    border-top: 8px solid red;
+    border-bottom: 8px solid blue;
+    border-right: 8px solid blue;
+    border-left: 8px solid blue;
+    border-radius: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: desplazar 2s infinite linear; 
+    font-size: 40px;
+}
+
+
+
+
+@keyframes desplazar {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.caminando {
+    width: 108px;
+    height: 140px;
+    background-image: url("../assets/persona.jpg");
+    background-size: 540px 140px; 
+    animation: cambiarFotograma 0.7s steps(5) infinite, 8s;
+}
+
+
+@keyframes cambiarFotograma {
+    from {
+        background-position: 0px 0;
+    }
+    to {
+        background-position: -550px 0;
+    }
+}
+
+
+.aparece1{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background-color: red;
+    gap: 100px;
+}
+
+
+.aparece2{
+    margin-top: 30px;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background-color: blue;
+    gap: 100px;
+}
+
+
+.aparece3{
+    margin-top: 30px;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background-color: green;
+    gap: 100px;
+}
+
+
+.aparece {
+    opacity: 0;
+    animation: mostrar 1s ease-in-out forwards;
+}
+
+
+.aparece1 {
+    animation-delay: 0.2s;
+}
+
+
+.aparece2 {
+    animation-delay: 0.6s;
+}
+
+
+.aparece3 {
+    animation-delay: 1.0s;
+}
+
+
+@keyframes mostrar {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
